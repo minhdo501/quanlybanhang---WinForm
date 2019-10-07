@@ -79,5 +79,25 @@ namespace QLBH.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_business_logo_design_png_image_915991__1570456544_68530 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree_business_logo_design_png_image_915991__1570456544_68530", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_business_logo_design_png_image_915991__1570456632_46479 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree_business_logo_design_png_image_915991__1570456632_46479", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

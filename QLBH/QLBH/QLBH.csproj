@@ -90,5 +90,11 @@
   <ItemGroup>
     <None Include="Resources\89d316b4a47cc4fe730aa82ea6451f16__1570456097_76907 %281%29.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree_business_logo_design_png_image_915991__1570456544_68530.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree_business_logo_design_png_image_915991__1570456632_46479.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

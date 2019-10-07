@@ -39,7 +39,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 272);
+            this.label1.Location = new System.Drawing.Point(4, 257);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 13);
             this.label1.TabIndex = 0;
@@ -48,7 +48,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 301);
+            this.label2.Location = new System.Drawing.Point(4, 286);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 1;
@@ -57,21 +57,21 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(97, 269);
+            this.txtUsername.Location = new System.Drawing.Point(94, 254);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(268, 20);
+            this.txtUsername.Size = new System.Drawing.Size(197, 20);
             this.txtUsername.TabIndex = 2;
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(97, 294);
+            this.txtPass.Location = new System.Drawing.Point(94, 279);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(268, 20);
+            this.txtPass.Size = new System.Drawing.Size(197, 20);
             this.txtPass.TabIndex = 3;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(290, 320);
+            this.button1.Location = new System.Drawing.Point(216, 305);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -81,20 +81,21 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(159, 320);
+            this.button2.Location = new System.Drawing.Point(108, 305);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 23);
+            this.button2.Size = new System.Drawing.Size(102, 23);
             this.button2.TabIndex = 5;
             this.button2.Text = "Quên mật khẩu";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::QLBH.Properties.Resources._89d316b4a47cc4fe730aa82ea6451f16__1570456097_76907__1_;
+            this.BackgroundImage = global::QLBH.Properties.Resources.pngtree_business_logo_design_png_image_915991__1570456544_68530;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(371, 348);
+            this.ClientSize = new System.Drawing.Size(299, 337);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtPass);
