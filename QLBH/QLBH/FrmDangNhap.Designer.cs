@@ -1,6 +1,6 @@
 ﻿namespace QLBH
 {
-    partial class FrmLogin
+    partial class FrmDangNhap
     {
         /// <summary>
         /// Required designer variable.
@@ -66,6 +66,7 @@
             // 
             this.txtPass.Location = new System.Drawing.Point(94, 279);
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(197, 20);
             this.txtPass.TabIndex = 3;
             // 
@@ -89,7 +90,7 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // FrmLogin
+            // FrmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -103,7 +104,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "FrmLogin";
+            this.Name = "FrmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
             this.ResumeLayout(false);
