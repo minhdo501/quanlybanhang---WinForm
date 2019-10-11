@@ -33,5 +33,11 @@ namespace QLBH
             FrmDanhMucNhanVien frmDMNV = new FrmDanhMucNhanVien();
             frmDMNV.Show();
         }
+
+        private void CấuHìnhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConfig frmconfig = new FrmConfig();
+            frmconfig.Show();
+        }
     }
 }
