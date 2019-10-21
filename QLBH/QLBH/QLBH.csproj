@@ -105,6 +105,12 @@
     <Compile Include="Functions\FrmDatHang.Designer.cs">
       <DependentUpon>FrmDatHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Functions\FrmDatHangChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Functions\FrmDatHangChiTiet.Designer.cs">
+      <DependentUpon>FrmDatHangChiTiet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmConfig.resx">
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Functions\FrmDatHang.resx">
       <DependentUpon>FrmDatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Functions\FrmDatHangChiTiet.resx">
+      <DependentUpon>FrmDatHangChiTiet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

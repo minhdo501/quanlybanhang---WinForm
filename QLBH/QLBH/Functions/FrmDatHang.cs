@@ -26,12 +26,19 @@ namespace QLBH.Functions
 
         private void FrmDatHang_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'databaseQLBHDataSet1.order_details' table. You can move, or remove it, as needed.
+            this.order_detailsTableAdapter.Fill(this.databaseQLBHDataSet1.order_details);
             // TODO: This line of code loads data into the 'databaseQLBHDataSet1.orders' table. You can move, or remove it, as needed.
             this.ordersTableAdapter.Fill(this.databaseQLBHDataSet1.orders);
 
         }
 
         private void paid_dateLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

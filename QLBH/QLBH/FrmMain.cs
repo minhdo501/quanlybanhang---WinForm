@@ -39,5 +39,11 @@ namespace QLBH
             FrmConfig frmconfig = new FrmConfig();
             frmconfig.Show();
         }
+
+        private void đặtHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDatHangChiTiet frmdathangchitiet = new FrmDatHangChiTiet();
+            frmdathangchitiet.Show();
+        }
     }
 }
