@@ -227,5 +227,40 @@ namespace QLBH.Functions
             LoadDanhSachKhachHang();
             LoadDanhSachSanPham();
         }
+
+        private void btnInHoaDon_Click(object sender, EventArgs e)
+        {
+            // Chuẩn bị dữ liệu
+            databaseQLBHDataSet1.ReportHoaDonBanHang.Rows.Clear();
+            foreach (databaseQLBHDataSet1.order_detailsRow orderDetailRow in databaseQLBHDataSet1.order_details.Rows)
+            {
+                var row = databaseQLBHDataSet1.ReportHoaDonBanHang.NewReportHoaDonBanHangRow();
+
+                // Nạp thông tin Chung về Công ty lấy từ Cấu hình (config)
+                // Sử dụng cú pháp LINQ: collection.Where(p => p...).FirstOrDefault() để lấy dòng dữ liệu thỏa điều kiện
+                row.report_company_name = databaseQLBHDataSet1.configs.Where(p => p.key == "company.name").FirstOrDefault().value;
+
+
+                // Nạp thông tin về Khách hàng (customer)
+
+                // Nạp thông tin về Đơn hàng (order)
+                row.report_ordered_date_day = order_dateDateTimePicker.Value.Day.ToString();
+                row.report_ordered_date_month = order_dateDateTimePicker.Value.Month.ToString();
+                row.report_ordered_date_year = order_dateDateTimePicker.Value.Year.ToString();
+
+                // Nạp thông tin về Đơn hàng Chi tiết (order_detail)
+                row.report_order_detail_product_name = orderDetailRow.product_id.ToString();
+
+                // Add dòng dữ liệu vào DataTable
+                databaseQLBHDataSet1.ReportHoaDonBanHang.AddReportHoaDonBanHangRow(row);
+            }
+
+            // Hiển thị FormReport
+            FormReport frm = new FormReport();
+            frm.reportViewerCommon.LocalReport.ReportEmbeddedResource = "QuanLyBanHang.Reports.ReportHoaDonDatHang.rdlc";
+            frm.ReportDataSourceName = "DataSetReportOrder";
+            frm.Data = databaseQLBHDataSet1.ReportHoaDonBanHang;
+            frm.ShowDialog();
+        }
     }
 }

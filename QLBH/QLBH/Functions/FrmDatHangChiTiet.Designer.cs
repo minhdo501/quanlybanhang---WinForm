@@ -51,6 +51,7 @@
             System.Windows.Forms.Label lblFromDate;
             System.Windows.Forms.Label lblToDate;
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbbProducts = new System.Windows.Forms.ComboBox();
             this.order_detailsDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,6 +72,7 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThemChiTiet = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbCustomers = new System.Windows.Forms.ComboBox();
             this.cbbEmployees = new System.Windows.Forms.ComboBox();
             this.order_statusTextBox = new System.Windows.Forms.TextBox();
             this.paid_dateDateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -93,8 +95,6 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ordersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnLayDanhSach = new System.Windows.Forms.Button();
-            this.cbbCustomers = new System.Windows.Forms.ComboBox();
-            this.cbbProducts = new System.Windows.Forms.ComboBox();
             discountLabel = new System.Windows.Forms.Label();
             unit_priceLabel = new System.Windows.Forms.Label();
             quantityLabel = new System.Windows.Forms.Label();
@@ -342,6 +342,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin chi tiết đơn hàng";
             // 
+            // cbbProducts
+            // 
+            this.cbbProducts.FormattingEnabled = true;
+            this.cbbProducts.Location = new System.Drawing.Point(75, 19);
+            this.cbbProducts.Name = "cbbProducts";
+            this.cbbProducts.Size = new System.Drawing.Size(121, 21);
+            this.cbbProducts.TabIndex = 35;
+            // 
             // order_detailsDataGridView
             // 
             this.order_detailsDataGridView.AutoGenerateColumns = false;
@@ -444,6 +452,7 @@
             this.btnInHoaDon.TabIndex = 38;
             this.btnInHoaDon.Text = "In hóa đơn";
             this.btnInHoaDon.UseVisualStyleBackColor = true;
+            this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
             // 
             // discountNumericUpDown
             // 
@@ -526,6 +535,14 @@
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin đơn hàng";
+            // 
+            // cbbCustomers
+            // 
+            this.cbbCustomers.FormattingEnabled = true;
+            this.cbbCustomers.Location = new System.Drawing.Point(87, 47);
+            this.cbbCustomers.Name = "cbbCustomers";
+            this.cbbCustomers.Size = new System.Drawing.Size(121, 21);
+            this.cbbCustomers.TabIndex = 34;
             // 
             // cbbEmployees
             // 
@@ -694,22 +711,6 @@
             this.btnLayDanhSach.Text = "Lấy danh sách đơn hàng";
             this.btnLayDanhSach.UseVisualStyleBackColor = true;
             this.btnLayDanhSach.Click += new System.EventHandler(this.btnLayDanhSach_Click);
-            // 
-            // cbbCustomers
-            // 
-            this.cbbCustomers.FormattingEnabled = true;
-            this.cbbCustomers.Location = new System.Drawing.Point(87, 47);
-            this.cbbCustomers.Name = "cbbCustomers";
-            this.cbbCustomers.Size = new System.Drawing.Size(121, 21);
-            this.cbbCustomers.TabIndex = 34;
-            // 
-            // cbbProducts
-            // 
-            this.cbbProducts.FormattingEnabled = true;
-            this.cbbProducts.Location = new System.Drawing.Point(75, 19);
-            this.cbbProducts.Name = "cbbProducts";
-            this.cbbProducts.Size = new System.Drawing.Size(121, 21);
-            this.cbbProducts.TabIndex = 35;
             // 
             // FrmDatHangChiTiet
             // 
