@@ -76,7 +76,7 @@
             this.cbbEmployees = new System.Windows.Forms.ComboBox();
             this.order_statusTextBox = new System.Windows.Forms.TextBox();
             this.paid_dateDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.order_dateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.payment_typeTextBox = new System.Windows.Forms.TextBox();
             this.shipping_feeTextBox = new System.Windows.Forms.TextBox();
@@ -505,7 +505,7 @@
             this.groupBox1.Controls.Add(this.order_statusTextBox);
             this.groupBox1.Controls.Add(paid_dateLabel);
             this.groupBox1.Controls.Add(this.paid_dateDateTimePicker);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.order_dateDateTimePicker);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(payment_typeLabel);
             this.groupBox1.Controls.Add(this.payment_typeTextBox);
@@ -566,12 +566,12 @@
             this.paid_dateDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.paid_dateDateTimePicker.TabIndex = 30;
             // 
-            // dateTimePicker2
+            // order_dateDateTimePicker
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(87, 73);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 8;
+            this.order_dateDateTimePicker.Location = new System.Drawing.Point(87, 73);
+            this.order_dateDateTimePicker.Name = "order_dateDateTimePicker";
+            this.order_dateDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.order_dateDateTimePicker.TabIndex = 8;
             // 
             // dateTimePicker1
             // 
@@ -783,7 +783,7 @@
         private System.Windows.Forms.DataGridView dgvDonHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker order_dateDateTimePicker;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox cbbEmployees;
         private System.Windows.Forms.ComboBox cbbCustomers;

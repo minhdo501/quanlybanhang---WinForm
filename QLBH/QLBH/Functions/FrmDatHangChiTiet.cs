@@ -232,7 +232,7 @@ namespace QLBH.Functions
         {
             // Chuẩn bị dữ liệu
             databaseQLBHDataSet1.ReportHoaDonBanHang.Rows.Clear();
-            foreach (databaseQLBHDataSet1.order_detailsRow orderDetailRow in databaseQLBHDataSet1.order_details.Rows)
+            foreach (DatabaseQLBHDataSet1.order_detailsRow orderDetailRow in databaseQLBHDataSet1.order_details.Rows)
             {
                 var row = databaseQLBHDataSet1.ReportHoaDonBanHang.NewReportHoaDonBanHangRow();
 
@@ -257,7 +257,7 @@ namespace QLBH.Functions
 
             // Hiển thị FormReport
             FormReport frm = new FormReport();
-            frm.reportViewerCommon.LocalReport.ReportEmbeddedResource = "QuanLyBanHang.Reports.ReportHoaDonDatHang.rdlc";
+            frm.reportViewerCommon.LocalReport.ReportEmbeddedResource = "QLBH.Reports.ReportHoaDonBanHang.rdlc";
             frm.ReportDataSourceName = "DataSetReportOrder";
             frm.Data = databaseQLBHDataSet1.ReportHoaDonBanHang;
             frm.ShowDialog();
