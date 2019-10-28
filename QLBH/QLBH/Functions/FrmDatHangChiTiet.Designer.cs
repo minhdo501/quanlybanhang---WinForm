@@ -50,9 +50,9 @@
             System.Windows.Forms.Label employee_idLabel;
             System.Windows.Forms.Label lblFromDate;
             System.Windows.Forms.Label lblToDate;
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.grpThongTinChiTietDonHang = new System.Windows.Forms.GroupBox();
             this.cbbProducts = new System.Windows.Forms.ComboBox();
-            this.order_detailsDataGridView = new System.Windows.Forms.DataGridView();
+            this.dgvChiTietDonHang = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,23 +63,22 @@
             this.order_detailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.databaseQLBHDataSet1 = new QLBH.DatabaseQLBHDataSet1();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nudSoLuong = new System.Windows.Forms.NumericUpDown();
+            this.nudDonGia = new System.Windows.Forms.NumericUpDown();
             this.btnInHoaDon = new System.Windows.Forms.Button();
-            this.discountNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.nudGiamGia = new System.Windows.Forms.NumericUpDown();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThemChiTiet = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpThongTinDonHang = new System.Windows.Forms.GroupBox();
             this.cbbCustomers = new System.Windows.Forms.ComboBox();
             this.cbbEmployees = new System.Windows.Forms.ComboBox();
             this.order_statusTextBox = new System.Windows.Forms.TextBox();
             this.paid_dateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.order_dateDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.shipped_dateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.payment_typeTextBox = new System.Windows.Forms.TextBox();
-            this.shipping_feeTextBox = new System.Windows.Forms.TextBox();
             this.ship_countryTextBox = new System.Windows.Forms.TextBox();
             this.ship_postal_codeTextBox = new System.Windows.Forms.TextBox();
             this.ship_stateTextBox = new System.Windows.Forms.TextBox();
@@ -95,6 +94,8 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ordersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnLayDanhSach = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.nudShipping_fee = new System.Windows.Forms.NumericUpDown();
             discountLabel = new System.Windows.Forms.Label();
             unit_priceLabel = new System.Windows.Forms.Label();
             quantityLabel = new System.Windows.Forms.Label();
@@ -116,17 +117,18 @@
             employee_idLabel = new System.Windows.Forms.Label();
             lblFromDate = new System.Windows.Forms.Label();
             lblToDate = new System.Windows.Forms.Label();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.order_detailsDataGridView)).BeginInit();
+            this.grpThongTinChiTietDonHang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietDonHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.order_detailsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseQLBHDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.discountNumericUpDown)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDonGia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGiamGia)).BeginInit();
+            this.grpThongTinDonHang.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudShipping_fee)).BeginInit();
             this.SuspendLayout();
             // 
             // discountLabel
@@ -318,29 +320,24 @@
             lblToDate.TabIndex = 37;
             lblToDate.Text = "To date:";
             // 
-            // groupBox2
+            // grpThongTinChiTietDonHang
             // 
-            this.groupBox2.Controls.Add(this.cbbProducts);
-            this.groupBox2.Controls.Add(this.order_detailsDataGridView);
-            this.groupBox2.Controls.Add(this.btnThoat);
-            this.groupBox2.Controls.Add(this.numericUpDown2);
-            this.groupBox2.Controls.Add(this.numericUpDown1);
-            this.groupBox2.Controls.Add(this.btnInHoaDon);
-            this.groupBox2.Controls.Add(this.discountNumericUpDown);
-            this.groupBox2.Controls.Add(this.btnThem);
-            this.groupBox2.Controls.Add(this.btnSua);
-            this.groupBox2.Controls.Add(this.btnXoa);
-            this.groupBox2.Controls.Add(this.btnThemChiTiet);
-            this.groupBox2.Controls.Add(discountLabel);
-            this.groupBox2.Controls.Add(unit_priceLabel);
-            this.groupBox2.Controls.Add(quantityLabel);
-            this.groupBox2.Controls.Add(product_idLabel);
-            this.groupBox2.Location = new System.Drawing.Point(287, 219);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(961, 284);
-            this.groupBox2.TabIndex = 36;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thông tin chi tiết đơn hàng";
+            this.grpThongTinChiTietDonHang.Controls.Add(this.cbbProducts);
+            this.grpThongTinChiTietDonHang.Controls.Add(this.dgvChiTietDonHang);
+            this.grpThongTinChiTietDonHang.Controls.Add(this.nudSoLuong);
+            this.grpThongTinChiTietDonHang.Controls.Add(this.nudDonGia);
+            this.grpThongTinChiTietDonHang.Controls.Add(this.nudGiamGia);
+            this.grpThongTinChiTietDonHang.Controls.Add(this.btnThemChiTiet);
+            this.grpThongTinChiTietDonHang.Controls.Add(discountLabel);
+            this.grpThongTinChiTietDonHang.Controls.Add(unit_priceLabel);
+            this.grpThongTinChiTietDonHang.Controls.Add(quantityLabel);
+            this.grpThongTinChiTietDonHang.Controls.Add(product_idLabel);
+            this.grpThongTinChiTietDonHang.Location = new System.Drawing.Point(287, 219);
+            this.grpThongTinChiTietDonHang.Name = "grpThongTinChiTietDonHang";
+            this.grpThongTinChiTietDonHang.Size = new System.Drawing.Size(961, 260);
+            this.grpThongTinChiTietDonHang.TabIndex = 36;
+            this.grpThongTinChiTietDonHang.TabStop = false;
+            this.grpThongTinChiTietDonHang.Text = "Thông tin chi tiết đơn hàng";
             // 
             // cbbProducts
             // 
@@ -350,11 +347,11 @@
             this.cbbProducts.Size = new System.Drawing.Size(121, 21);
             this.cbbProducts.TabIndex = 35;
             // 
-            // order_detailsDataGridView
+            // dgvChiTietDonHang
             // 
-            this.order_detailsDataGridView.AutoGenerateColumns = false;
-            this.order_detailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.order_detailsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvChiTietDonHang.AutoGenerateColumns = false;
+            this.dgvChiTietDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvChiTietDonHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -362,11 +359,11 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
-            this.order_detailsDataGridView.DataSource = this.order_detailsBindingSource;
-            this.order_detailsDataGridView.Location = new System.Drawing.Point(15, 58);
-            this.order_detailsDataGridView.Name = "order_detailsDataGridView";
-            this.order_detailsDataGridView.Size = new System.Drawing.Size(937, 192);
-            this.order_detailsDataGridView.TabIndex = 39;
+            this.dgvChiTietDonHang.DataSource = this.order_detailsBindingSource;
+            this.dgvChiTietDonHang.Location = new System.Drawing.Point(15, 58);
+            this.dgvChiTietDonHang.Name = "dgvChiTietDonHang";
+            this.dgvChiTietDonHang.Size = new System.Drawing.Size(937, 192);
+            this.dgvChiTietDonHang.TabIndex = 39;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -423,30 +420,30 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(878, 256);
+            this.btnThoat.Location = new System.Drawing.Point(1165, 485);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 23);
             this.btnThoat.TabIndex = 39;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown2
+            // nudSoLuong
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(287, 20);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown2.TabIndex = 39;
+            this.nudSoLuong.Location = new System.Drawing.Point(287, 20);
+            this.nudSoLuong.Name = "nudSoLuong";
+            this.nudSoLuong.Size = new System.Drawing.Size(120, 20);
+            this.nudSoLuong.TabIndex = 39;
             // 
-            // numericUpDown1
+            // nudDonGia
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(491, 20);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 39;
+            this.nudDonGia.Location = new System.Drawing.Point(491, 20);
+            this.nudDonGia.Name = "nudDonGia";
+            this.nudDonGia.Size = new System.Drawing.Size(120, 20);
+            this.nudDonGia.TabIndex = 39;
             // 
             // btnInHoaDon
             // 
-            this.btnInHoaDon.Location = new System.Drawing.Point(554, 256);
+            this.btnInHoaDon.Location = new System.Drawing.Point(760, 485);
             this.btnInHoaDon.Name = "btnInHoaDon";
             this.btnInHoaDon.Size = new System.Drawing.Size(75, 23);
             this.btnInHoaDon.TabIndex = 38;
@@ -454,25 +451,26 @@
             this.btnInHoaDon.UseVisualStyleBackColor = true;
             this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
             // 
-            // discountNumericUpDown
+            // nudGiamGia
             // 
-            this.discountNumericUpDown.Location = new System.Drawing.Point(710, 20);
-            this.discountNumericUpDown.Name = "discountNumericUpDown";
-            this.discountNumericUpDown.Size = new System.Drawing.Size(120, 20);
-            this.discountNumericUpDown.TabIndex = 33;
+            this.nudGiamGia.Location = new System.Drawing.Point(710, 20);
+            this.nudGiamGia.Name = "nudGiamGia";
+            this.nudGiamGia.Size = new System.Drawing.Size(120, 20);
+            this.nudGiamGia.TabIndex = 33;
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(635, 256);
+            this.btnThem.Location = new System.Drawing.Point(841, 485);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
             this.btnThem.TabIndex = 38;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(716, 256);
+            this.btnSua.Location = new System.Drawing.Point(922, 485);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 23);
             this.btnSua.TabIndex = 38;
@@ -481,7 +479,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(797, 256);
+            this.btnXoa.Location = new System.Drawing.Point(1003, 485);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
             this.btnXoa.TabIndex = 38;
@@ -496,45 +494,46 @@
             this.btnThemChiTiet.TabIndex = 37;
             this.btnThemChiTiet.Text = "Thêm chi tiết";
             this.btnThemChiTiet.UseVisualStyleBackColor = true;
+            this.btnThemChiTiet.Click += new System.EventHandler(this.btnThemChiTiet_Click);
             // 
-            // groupBox1
+            // grpThongTinDonHang
             // 
-            this.groupBox1.Controls.Add(this.cbbCustomers);
-            this.groupBox1.Controls.Add(this.cbbEmployees);
-            this.groupBox1.Controls.Add(order_statusLabel);
-            this.groupBox1.Controls.Add(this.order_statusTextBox);
-            this.groupBox1.Controls.Add(paid_dateLabel);
-            this.groupBox1.Controls.Add(this.paid_dateDateTimePicker);
-            this.groupBox1.Controls.Add(this.order_dateDateTimePicker);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(payment_typeLabel);
-            this.groupBox1.Controls.Add(this.payment_typeTextBox);
-            this.groupBox1.Controls.Add(shipping_feeLabel);
-            this.groupBox1.Controls.Add(this.shipping_feeTextBox);
-            this.groupBox1.Controls.Add(ship_countryLabel);
-            this.groupBox1.Controls.Add(this.ship_countryTextBox);
-            this.groupBox1.Controls.Add(ship_postal_codeLabel);
-            this.groupBox1.Controls.Add(this.ship_postal_codeTextBox);
-            this.groupBox1.Controls.Add(ship_stateLabel);
-            this.groupBox1.Controls.Add(this.ship_stateTextBox);
-            this.groupBox1.Controls.Add(ship_cityLabel);
-            this.groupBox1.Controls.Add(this.ship_cityTextBox);
-            this.groupBox1.Controls.Add(ship_address2Label);
-            this.groupBox1.Controls.Add(this.ship_address2TextBox);
-            this.groupBox1.Controls.Add(ship_address1Label);
-            this.groupBox1.Controls.Add(this.ship_address1TextBox);
-            this.groupBox1.Controls.Add(ship_nameLabel);
-            this.groupBox1.Controls.Add(this.ship_nameTextBox);
-            this.groupBox1.Controls.Add(shipped_dateLabel);
-            this.groupBox1.Controls.Add(order_dateLabel);
-            this.groupBox1.Controls.Add(customer_idLabel);
-            this.groupBox1.Controls.Add(employee_idLabel);
-            this.groupBox1.Location = new System.Drawing.Point(287, 28);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(902, 185);
-            this.groupBox1.TabIndex = 35;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin đơn hàng";
+            this.grpThongTinDonHang.Controls.Add(this.nudShipping_fee);
+            this.grpThongTinDonHang.Controls.Add(this.cbbCustomers);
+            this.grpThongTinDonHang.Controls.Add(this.cbbEmployees);
+            this.grpThongTinDonHang.Controls.Add(order_statusLabel);
+            this.grpThongTinDonHang.Controls.Add(this.order_statusTextBox);
+            this.grpThongTinDonHang.Controls.Add(paid_dateLabel);
+            this.grpThongTinDonHang.Controls.Add(this.paid_dateDateTimePicker);
+            this.grpThongTinDonHang.Controls.Add(this.order_dateDateTimePicker);
+            this.grpThongTinDonHang.Controls.Add(this.shipped_dateDateTimePicker);
+            this.grpThongTinDonHang.Controls.Add(payment_typeLabel);
+            this.grpThongTinDonHang.Controls.Add(this.payment_typeTextBox);
+            this.grpThongTinDonHang.Controls.Add(shipping_feeLabel);
+            this.grpThongTinDonHang.Controls.Add(ship_countryLabel);
+            this.grpThongTinDonHang.Controls.Add(this.ship_countryTextBox);
+            this.grpThongTinDonHang.Controls.Add(ship_postal_codeLabel);
+            this.grpThongTinDonHang.Controls.Add(this.ship_postal_codeTextBox);
+            this.grpThongTinDonHang.Controls.Add(ship_stateLabel);
+            this.grpThongTinDonHang.Controls.Add(this.ship_stateTextBox);
+            this.grpThongTinDonHang.Controls.Add(ship_cityLabel);
+            this.grpThongTinDonHang.Controls.Add(this.ship_cityTextBox);
+            this.grpThongTinDonHang.Controls.Add(ship_address2Label);
+            this.grpThongTinDonHang.Controls.Add(this.ship_address2TextBox);
+            this.grpThongTinDonHang.Controls.Add(ship_address1Label);
+            this.grpThongTinDonHang.Controls.Add(this.ship_address1TextBox);
+            this.grpThongTinDonHang.Controls.Add(ship_nameLabel);
+            this.grpThongTinDonHang.Controls.Add(this.ship_nameTextBox);
+            this.grpThongTinDonHang.Controls.Add(shipped_dateLabel);
+            this.grpThongTinDonHang.Controls.Add(order_dateLabel);
+            this.grpThongTinDonHang.Controls.Add(customer_idLabel);
+            this.grpThongTinDonHang.Controls.Add(employee_idLabel);
+            this.grpThongTinDonHang.Location = new System.Drawing.Point(287, 28);
+            this.grpThongTinDonHang.Name = "grpThongTinDonHang";
+            this.grpThongTinDonHang.Size = new System.Drawing.Size(902, 185);
+            this.grpThongTinDonHang.TabIndex = 35;
+            this.grpThongTinDonHang.TabStop = false;
+            this.grpThongTinDonHang.Text = "Thông tin đơn hàng";
             // 
             // cbbCustomers
             // 
@@ -573,12 +572,12 @@
             this.order_dateDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.order_dateDateTimePicker.TabIndex = 8;
             // 
-            // dateTimePicker1
+            // shipped_dateDateTimePicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(87, 99);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 10;
+            this.shipped_dateDateTimePicker.Location = new System.Drawing.Point(87, 99);
+            this.shipped_dateDateTimePicker.Name = "shipped_dateDateTimePicker";
+            this.shipped_dateDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.shipped_dateDateTimePicker.TabIndex = 10;
             // 
             // payment_typeTextBox
             // 
@@ -586,13 +585,6 @@
             this.payment_typeTextBox.Name = "payment_typeTextBox";
             this.payment_typeTextBox.Size = new System.Drawing.Size(100, 20);
             this.payment_typeTextBox.TabIndex = 28;
-            // 
-            // shipping_feeTextBox
-            // 
-            this.shipping_feeTextBox.Location = new System.Drawing.Point(433, 151);
-            this.shipping_feeTextBox.Name = "shipping_feeTextBox";
-            this.shipping_feeTextBox.Size = new System.Drawing.Size(100, 20);
-            this.shipping_feeTextBox.TabIndex = 26;
             // 
             // ship_countryTextBox
             // 
@@ -712,51 +704,74 @@
             this.btnLayDanhSach.UseVisualStyleBackColor = true;
             this.btnLayDanhSach.Click += new System.EventHandler(this.btnLayDanhSach_Click);
             // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(1084, 485);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(75, 23);
+            this.btnLuu.TabIndex = 38;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // nudShipping_fee
+            // 
+            this.nudShipping_fee.Location = new System.Drawing.Point(433, 152);
+            this.nudShipping_fee.Name = "nudShipping_fee";
+            this.nudShipping_fee.Size = new System.Drawing.Size(100, 20);
+            this.nudShipping_fee.TabIndex = 40;
+            // 
             // FrmDatHangChiTiet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1248, 512);
+            this.ClientSize = new System.Drawing.Size(1248, 514);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpThongTinChiTietDonHang);
+            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.grpThongTinDonHang);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnLuu);
+            this.Controls.Add(this.btnInHoaDon);
+            this.Controls.Add(this.btnSua);
+            this.Controls.Add(this.btnThem);
             this.Name = "FrmDatHangChiTiet";
             this.Text = "FrmDatHangChiTiet";
             this.Load += new System.EventHandler(this.FrmDatHangChiTiet_Load);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.order_detailsDataGridView)).EndInit();
+            this.grpThongTinChiTietDonHang.ResumeLayout(false);
+            this.grpThongTinChiTietDonHang.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietDonHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.order_detailsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseQLBHDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.discountNumericUpDown)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDonGia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGiamGia)).EndInit();
+            this.grpThongTinDonHang.ResumeLayout(false);
+            this.grpThongTinDonHang.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudShipping_fee)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.GroupBox grpThongTinChiTietDonHang;
+        private System.Windows.Forms.NumericUpDown nudSoLuong;
+        private System.Windows.Forms.NumericUpDown nudDonGia;
         private System.Windows.Forms.Button btnInHoaDon;
-        private System.Windows.Forms.NumericUpDown discountNumericUpDown;
+        private System.Windows.Forms.NumericUpDown nudGiamGia;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThemChiTiet;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpThongTinDonHang;
         private System.Windows.Forms.TextBox order_statusTextBox;
         private System.Windows.Forms.DateTimePicker paid_dateDateTimePicker;
         private System.Windows.Forms.TextBox payment_typeTextBox;
-        private System.Windows.Forms.TextBox shipping_feeTextBox;
         private System.Windows.Forms.TextBox ship_countryTextBox;
         private System.Windows.Forms.TextBox ship_postal_codeTextBox;
         private System.Windows.Forms.TextBox ship_stateTextBox;
@@ -770,7 +785,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private DatabaseQLBHDataSet1 databaseQLBHDataSet1;
         private System.Windows.Forms.BindingSource order_detailsBindingSource;
-        private System.Windows.Forms.DataGridView order_detailsDataGridView;
+        private System.Windows.Forms.DataGridView dgvChiTietDonHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -784,9 +799,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DateTimePicker order_dateDateTimePicker;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker shipped_dateDateTimePicker;
         private System.Windows.Forms.ComboBox cbbEmployees;
         private System.Windows.Forms.ComboBox cbbCustomers;
         private System.Windows.Forms.ComboBox cbbProducts;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.NumericUpDown nudShipping_fee;
     }
 }
